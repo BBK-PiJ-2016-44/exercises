@@ -1,15 +1,17 @@
+def cons = new BufferedReader(new InputStreamReader(System.in))
+
 println "Please input three numbers for sorting"
 
 print "First number: "
-String str1 = System.console().readLine()
+String str1 = cons.readLine()
 int a = Integer.parseInt(str1)
 
 print "Second number: "
-String str2 = System.console().readLine()
+String str2 = cons.readLine()
 int b = Integer.parseInt(str2)
 
 print "Third number: "
-String str3 = System.console().readLine()
+String str3 = cons.readLine()
 int c = Integer.parseInt(str3)
 
 int min, mid, max

@@ -1,7 +1,10 @@
+def cons = new BufferedReader(new InputStreamReader(System.in))
+
 int i = 1;
 int j;
+
 print "How many lines would you like: ";
-String s = System.console().readLine();
+String s = cons.readLine();
 int numLines = Integer.parseInt(s);
 
 while (i <= numLines) {
@@ -12,4 +15,4 @@ while (i <= numLines) {
     }
     println()
     i++;
-}	
+}

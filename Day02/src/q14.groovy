@@ -16,4 +16,4 @@ while (count <= 1000) {
     }
     i++;
     prime = true;
-}		
+}

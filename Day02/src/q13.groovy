@@ -15,4 +15,4 @@ while (i <= 1000) {
     }
     i++;
     prime = true;
-}		
+}

@@ -1,21 +1,23 @@
-println("Please enter two numbers and we will calculate the quotient and remainder");
-print("First number: ");
-String str1 = System.console().readLine();
-int i = Integer.parseInt(str1);
+def cons = new BufferedReader(new InputStreamReader(System.in))
 
-print("Second number: ");
-String str2 = System.console().readLine();
-int j = Integer.parseInt(str2);
+println "Please enter two numbers and we will calculate the quotient and remainder"
+print "First number: "
+String str1 = cons.readLine()
+int i = Integer.parseInt(str1)
 
-int quotient = 0;
+print "Second number: "
+String str2 = cons.readLine()
+int j = Integer.parseInt(str2)
+
+int quotient = 0
 int remainder = 0;
-int work = 0;
+int work = 0
 
 while (work + j <= i) {
-    work = work + j;
-    quotient = quotient + 1;
+    work = work + j
+    quotient = quotient + 1
 }
-remainder = i - work;
+remainder = i - work
 
-println "" + i + " divided by " + j + " is " + quotient + ", remainder " + remainder;
+println "" + i + " divided by " + j + " is " + quotient + ", remainder " + remainder
 

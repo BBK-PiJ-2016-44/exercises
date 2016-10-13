@@ -1,3 +1,5 @@
+def cons = new BufferedReader(new InputStreamReader(System.in))
+
 double p = 0.0
 double q = 0.0
 double answer = 0.0
@@ -7,34 +9,36 @@ String str
 //get inputs
 println "Please provide two numbers"
 print "First number: "
-str = System.console().readLine()
+str = cons.readLine()
 p = Double.parseDouble(str)
 println "Entered: " + p
 
 print "Second number: "
-str = System.console().readLine()
+str = cons.readLine()
 q = Double.parseDouble(str)
 println "Entered: " + q
 
- System.out.print("What do you want to do?  a = add, s = subtract, m = multiply, d = divide: ")
- String str = System.console().readLine()
- System.out.println("Entered: " + str)
+print "What do you want to do?  a = add, s = subtract, m = multiply, d = divide: "
+str = cons.readLine()
+println "Entered: " + str
 
- // calculate
- if (str.equals("+")) {
-    answer = p + q
- } else {
-    if (str.equals("-")) {
-            answer = p - q
-    } else {
-        if (str.equals("x")) {
-            answer = p * q
-        } else {
-            if (str.equals("/")) {
-                answer = p / q
-            } else {
-                println "Invalid operator " + str
-            }
+// calculate
+switch (str) {
+    case "+":
+        answer = p + q
+        break
+    case "-":
+        answer = p - q
+        break
+    case "x":
+        answer = p * q
+        break
+    case "/":
+        answer = p / q
+        break
+    default:
+        println "Invalid operator " + str
+}
 
 //output
-System.out.println("The answer is: " + answer)
+println "The answer is: " + answer

@@ -1,3 +1,5 @@
+def cons = new BufferedReader(new InputStreamReader(System.in))
+
 class Point {
     double x
     double y
@@ -15,20 +17,20 @@ double downRightX, downRightY
 // Process input for Up Left Corner
 
 print "Up Left X: "
-str = System.console().readLine()
+str = cons.readLine()
 topLeftX = Double.parseDouble(str)
 
 print "Up Left Y: "
-str = System.console().readLine()
+str = cons.readLine()
 topLeftY = Double.parseDouble(str)
 
 // Process input for Down Right Corner
 
 print "Down RightX: "
-str = System.console().readLine()
+str = cons.readLine()
 downRightX = Double.parseDouble(str)
 print "Down Right Y: "
-str = System.console().readLine()
+str = cons.readLine()
 downRightY = Double.parseDouble(str)
 
 // Make the points

@@ -1,24 +1,29 @@
-System.out.println("Input an arbitrarily long sequence of positive numbers ending with -1")
+def cons = new BufferedReader(new InputStreamReader(System.in))
 
-// This should be a do..while loop but groovy doesn't have such a construct
-
+boolean firstNumber = true
 String insequence = "Yes"
+int prev
 
-print("Number: ")
-String str = System.console().readLine();
-int i  = Integer.parseInt(str);
-int j
+println "Enter a (arbitrarily long)  sequence of +ve numbers"
+println "Enter -1 to end the sequence"
 
-while (i != -1) {
-    print("Number: ")
-	str = System.console().readLine();
-	j = Integer.parseInt(str);
+while (true) {
+    print "Please enter a number: "
+    String str = cons.readLine()
+    value = Integer.parseInt(str)
 
-	if (j != -1) {
-        if (i + 1 != j)
-            insequence = "No"
+    if (value == -1) {
+        break
     }
-    i = j
+
+    if (firstNumber) {
+        firstNumber = false
+    } else {
+        if (prev != (value - 1)) {
+            insequence = "No"
+        }
+    }
+    prev = value
 }
 
-System.out.println(insequence);
+println insequence

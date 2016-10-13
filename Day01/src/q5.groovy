@@ -1,19 +1,21 @@
-println("Please enter two numbers to multiply together");
-print("First number: ");
-String str1 = System.console().readLine();
-int i = Integer.parseInt(str1);
+def cons = new BufferedReader(new InputStreamReader(System.in))
 
-print("Second number: ");
-String str2 = System.console().readLine();
-int j = Integer.parseInt(str2);
+println "Please enter two numbers to multiply together"
+print "First number: "
+String str1 = cons.readLine()
+int i = Integer.parseInt(str1)
 
-int count = 1;
-int result = 0;
+print "Second number: "
+String str2 = cons.readLine()
+int j = Integer.parseInt(str2)
+
+int count = 1
+int result = 0
 
 while (count <= j) {
-    result = result + i;
-    count++;
+    result = result + i
+    count++
 }
 
-println("The result of multiplying " + i + " by " + j + " is " + result);
+println "The result of multiplying " + i + " by " + j + " is " + result
 
